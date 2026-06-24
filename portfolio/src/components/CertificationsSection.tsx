@@ -52,13 +52,7 @@ export default function CertificationsSection() {
         
         {/* Premium Cyber Grid Texture */}
         <div 
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
-            backgroundSize: "4rem 4rem",
-            maskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)",
-            WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)"
-          }}
+          className="absolute inset-0 opacity-[0.04] bg-pattern-cyber-grid"
         />
       </div>
 

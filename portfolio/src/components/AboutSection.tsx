@@ -106,11 +106,7 @@ export default function AboutSection() {
         
         {/* Subtle dot pattern grid */}
         <div 
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: "radial-gradient(#ffffff 1px, transparent 1px)",
-            backgroundSize: "32px 32px"
-          }}
+          className="absolute inset-0 opacity-[0.02] bg-pattern-dot-grid"
         />
       </div>
 

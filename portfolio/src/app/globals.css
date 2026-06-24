@@ -127,3 +127,24 @@
     @apply font-heading;
   }
 }
+
+/* ── Decorative Background Patterns (Design System) ── */
+
+:root {
+  --pattern-line-color: oklch(1 0 0);
+  --pattern-mask-color: oklch(0 0 0);
+}
+
+.bg-pattern-cyber-grid {
+  background-image:
+    linear-gradient(to right, var(--pattern-line-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--pattern-line-color) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, var(--pattern-mask-color) 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, var(--pattern-mask-color) 40%, transparent 100%);
+}
+
+.bg-pattern-dot-grid {
+  background-image: radial-gradient(var(--pattern-line-color) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
