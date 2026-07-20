@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { profileData } from "@/data/portfolio";
-import { Mail, MessageSquare, Send } from "lucide-react";
+import { Mail, MessageSquare, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +15,51 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], display: "swap" });
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export default function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    const formData = new FormData(e.currentTarget);
+    const subject = formData.get("subject");
+    const body = formData.get("body");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/rizkijuliadi03@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: subject || "New message from Portfolio!",
+          Subject: subject,
+          Message: body,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+      
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus("idle");
+      }, 5000);
+    }
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -121,10 +167,10 @@ export default function ContactSection() {
             <div className="bg-slate-900/90 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-2xl border border-slate-800/50 relative">
               <div className="mb-8">
                 <h3 className={`text-2xl font-bold text-slate-100 mb-2 ${spaceGrotesk.className}`}>Send me a message</h3>
-                <p className={`text-sm text-slate-400 ${inter.className}`}>Fill out the form below and it will open your default mail client.</p>
+                <p className={`text-sm text-slate-400 ${inter.className}`}>Fill out the form below to send a message directly to my email.</p>
               </div>
 
-              <form action={`mailto:${profileData.email}`} method="GET" className={`space-y-6 ${inter.className}`}>
+              <form onSubmit={handleSubmit} className={`space-y-6 ${inter.className}`}>
                 <div className="space-y-2">
                   <Label htmlFor="subject" className="text-slate-300 font-medium">Subject</Label>
                   <Input 
@@ -153,10 +199,36 @@ export default function ContactSection() {
                 
                 <Button 
                   type="submit" 
-                  className="w-full h-12 gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl shadow-[0_0_20px_rgba(37,99,235,0.3)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] border-0"
+                  disabled={isSubmitting}
+                  className={`w-full h-12 gap-2 text-white rounded-xl transition-all duration-300 border-0 ${
+                    submitStatus === 'success' 
+                      ? 'bg-emerald-600 hover:bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.3)]'
+                      : submitStatus === 'error'
+                      ? 'bg-red-600 hover:bg-red-500 shadow-[0_0_20px_rgba(239,68,68,0.3)]'
+                      : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)]'
+                  }`}
                 >
-                  <span className={`font-semibold text-[15px] ${inter.className}`}>Send Message</span>
-                  <Send className="w-4 h-4" />
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span className={`font-semibold text-[15px] ${inter.className}`}>Sending...</span>
+                    </>
+                  ) : submitStatus === 'success' ? (
+                    <>
+                      <CheckCircle2 className="w-5 h-5" />
+                      <span className={`font-semibold text-[15px] ${inter.className}`}>Message Sent!</span>
+                    </>
+                  ) : submitStatus === 'error' ? (
+                    <>
+                      <AlertCircle className="w-5 h-5" />
+                      <span className={`font-semibold text-[15px] ${inter.className}`}>Failed to Send. Try Again.</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className={`font-semibold text-[15px] ${inter.className}`}>Send Message</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
                 </Button>
               </form>
             </div>
