@@ -100,6 +100,28 @@ export const projectsData = [
     links: [
       { text: "Visit Channel", url: "https://www.youtube.com/@PsikologiNProduktif" }
     ]
+  },
+  {
+    id: "specforge-ai",
+    theme: "emerald",
+    title: "SpecForge AI",
+    type: "SaaS AI Product Requirements Document",
+    description: "A web-based SaaS platform acting as a Single Source of Truth to transform casual app ideas into professional PRDs dynamically using an AI-Guided Questionnaire and Token Streaming.",
+    tech_stack: ["Next.js", "Vercel AI SDK", "Drizzle ORM", "NextAuth"],
+    links: [
+      { text: "View on GitHub", url: "https://github.com/rizkijuliadi03/SPECFORGE-AI" }
+    ]
+  },
+  {
+    id: "ai-hybrid-trader",
+    theme: "blue",
+    title: "AI Hybrid Trader IDX V3",
+    type: "Web-Based AI Trading Platform",
+    description: "An AI-powered web-based algorithmic trading platform built for the Indonesian Stock Exchange (IDX), integrating algorithmic trading logic and real-time market data analysis.",
+    tech_stack: ["Next.js", "TypeScript", "Python"],
+    links: [
+      { text: "View on GitHub", url: "https://github.com/rizkijuliadi03/AI-HYBRID-TRADER-IDX-V3-Web-Based-" }
+    ]
   }
 ];
 
