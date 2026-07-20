@@ -143,6 +143,14 @@ export const certificationsData = [
     image_src: "/certiv/AI-for-Work.png"
   },
   {
+    id: "gemini-data-scientist",
+    name: "LLM-Based Tools: Gemini API Integration for Data Scientists",
+    issuer: "Hacktiv8 & Maju Bareng AI",
+    date: "2026",
+    link: "",
+    image_src: "/certiv/LLM-Based-Tools-Gemini-API.png"
+  },
+  {
     id: "icadeis",
     name: "Conference Presenter - ICADEIS 2025",
     issuer: "International Conference on Advancement in Data Science, E-learning and Information System",
