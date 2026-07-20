@@ -1,6 +1,3 @@
-Mantap. Dengan tambahan dua sertifikat AI dari Hacktiv8, sertifikat *presenter* ICADEIS, dan tautan publikasi IEEE, amunisi portofolio lo udah sangat lengkap dan punya nilai jual yang tinggi di mata rekruter.
-
-Berikut adalah **PRD (Project Requirements Document)** yang super detail, terstruktur, dan *make no mistake* sesuai dengan standar *software engineering* profesional. Lo bisa langsung jadikan dokumen ini sebagai panduan *coding* atau taruh di repositori GitHub lo.
 
 ---
 

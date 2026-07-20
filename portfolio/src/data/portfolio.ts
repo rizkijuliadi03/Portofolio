@@ -39,8 +39,9 @@ export const skillsData = [
     icon: "Code2",
     theme: "purple",
     groups: [
-      { label: "Programming", items: ["Python", "JavaScript", "PHP (Laravel)"] },
-      { label: "AI & Vision", items: ["Artificial Intelligence", "Deep Reinforcement Learning", "OpenCV"] },
+      { label: "Programming", items: ["Python", "TypeScript", "JavaScript", "Go (Golang)", "C++", "PHP (Laravel)"] },
+      { label: "AI & Vision", items: ["Artificial Intelligence", "Deep Reinforcement Learning", "OpenCV", "MediaPipe", "PyAutoGUI"] },
+      { label: "Frameworks & Web", items: ["Next.js", "React"] },
       { label: "Databases", items: ["PostgreSQL", "MySQL"] }
     ]
   },
