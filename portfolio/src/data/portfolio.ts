@@ -4,7 +4,7 @@ export const profileData = {
   email: "rizkijuliadi03@gmail.com",
   linkedin_url: "https://www.linkedin.com/in/rizki-juliadi-6062961a5/",
   youtube_url: "https://www.youtube.com/@PotensiProduktif",
-  resume_file_path: "/rizki-juliadi-cv.pdf",
+  resume_file_path: "/RIZKI-JULIADI-CV-2026-New-New.pdf",
   about: `Detail-oriented Informatics graduate from Telkom University with a GPA of 3.75 (Cum Laude) and a strong focus on 
 cybersecurity. Published IEEE researcher specializing in Web Penetration Testing using collaborative multi-agents. Proficient in 
 vulnerability analysis and technical documentation, with hands-on experience using security tools like Nmap, Burp Suite, and 

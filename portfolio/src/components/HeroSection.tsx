@@ -190,7 +190,7 @@ export default function HeroSection() {
             >
               <a
                 href={profileData.resume_file_path}
-                download="rizki-juliadi-cv.pdf"
+                download="RIZKI JULIADI - CV - 2026 New New.pdf"
                 className={buttonVariants({ size: "lg", className: "w-full sm:w-auto gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold transition-all duration-300 shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_35px_rgba(16,185,129,0.5)] cursor-pointer rounded-xl h-12" })}
               >
                 <Download className="w-4 h-4" />

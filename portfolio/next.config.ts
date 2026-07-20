@@ -5,11 +5,11 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/rizki-juliadi-cv.pdf",
+        source: "/RIZKI-JULIADI-CV-2026-New-New.pdf",
         headers: [
           {
             key: "Content-Disposition",
-            value: "attachment; filename=\"rizki-juliadi-cv.pdf\"",
+            value: "attachment; filename=\"RIZKI-JULIADI-CV-2026-New-New.pdf\"",
           },
           {
             key: "Content-Type",

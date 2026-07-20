@@ -51,7 +51,7 @@ export default function Navbar() {
             ))}
             <a
               href={profileData.resume_file_path}
-              download="rizki-juliadi-cv.pdf"
+              download="RIZKI JULIADI - CV - 2026 New New.pdf"
               className="inline-flex items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 disabled:pointer-events-none disabled:opacity-50 bg-emerald-500/10 text-emerald-500 border border-emerald-500/50 hover:bg-emerald-500 hover:text-slate-950 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] h-10 px-6 py-2"
             >
               Download CV
@@ -89,7 +89,7 @@ export default function Navbar() {
             ))}
             <a
               href={profileData.resume_file_path}
-              download="rizki-juliadi-cv.pdf"
+              download="RIZKI JULIADI - CV - 2026 New New.pdf"
               className="block w-full text-center px-3 py-3 mt-6 rounded-full text-base font-semibold transition-all duration-300 bg-emerald-500/10 text-emerald-500 border border-emerald-500/50 hover:bg-emerald-500 hover:text-slate-950 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]"
             >
               Download CV
