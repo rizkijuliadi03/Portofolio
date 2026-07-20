@@ -51,7 +51,7 @@ export const skillsData = [
     icon: "Users",
     theme: "orange",
     groups: [
-      { label: "Core Skills", items: ["Analytical Thinking", "Technical Documentation", "Academic Research", "Team Mentoring", "Public Speaking"] }
+      { label: "Core Skills", items: ["Analytical Thinking", "Teamwork", "Problem Solving", "Mentoring", "Research", "Technical Documentation", "Communication", "Time Management", "Public Speaking"] }
     ]
   }
 ];
