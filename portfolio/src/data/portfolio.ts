@@ -147,7 +147,7 @@ export const certificationsData = [
     name: "Conference Presenter - ICADEIS 2025",
     issuer: "International Conference on Advancement in Data Science, E-learning and Information System",
     date: "2025",
-    link: "",
+    link: "https://ieeexplore.ieee.org/document/10933244",
     image_src: "/certiv/Conference.png"
   }
 ];
