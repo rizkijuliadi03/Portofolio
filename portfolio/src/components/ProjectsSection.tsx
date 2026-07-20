@@ -133,7 +133,8 @@ export default function ProjectsSection() {
             // Item 2: Square (1 col)
             // Item 3: Square (1 col)
             // Item 4: Wide (2 cols)
-            const isWide = index === 0 || index === 3;
+            // Pattern repeats every 4 items to create an alternating mosaic
+            const isWide = index % 4 === 0 || index % 4 === 3;
             const bentoClass = isWide ? "lg:col-span-2" : "lg:col-span-1";
 
             return (
